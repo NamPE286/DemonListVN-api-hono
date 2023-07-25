@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-all --watch main.ts",
+    "start": "deno run --allow-env --allow-read --allow-ffi --allow-net main.ts"
+  },
+  "imports": {
+    "@src/" : "./src/",
+    "@utils/" : "./utils/",
+    "@classes/" : "./classes/",
+    "@db" : "./db.ts"
+  }
+}
