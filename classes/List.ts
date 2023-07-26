@@ -30,7 +30,7 @@ export default class {
         return res
     }
 
-    async fetchLevelsByUID(uid: string, start = 0, end = 50) {
+    async fetchProgress(uid: string, start = 0, end = 50) {
         const { data, error } = await supabase
             .from('records')
             .select(`userid, levelid, progress, levels!inner(id, ${this.type}Top)`)
