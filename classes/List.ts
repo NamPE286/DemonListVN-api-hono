@@ -16,14 +16,14 @@ export default class {
             .not(`${this.type}Top`, 'is', null)
             .order(sortBy)
             .range(start, end)
-        
-        if(error) {
+
+        if (error) {
             throw new Error(error.message)
         }
 
         const res: Level[] = []
 
-        for(const i of data) {
+        for (const i of data) {
             res.push(Object.assign(new Level(0), i));
         }
 
@@ -38,16 +38,15 @@ export default class {
             .not(`levels.${this.type}Top`, 'is', null)
             .gte(`levels.${this.type}Top`, start)
             .lte(`levels.${this.type}Top`, end)
-        
-        if(error) {
+
+        if (error) {
             throw new Error(error.message)
         }
 
-        // deno-lint-ignore no-explicit-any
-        const res: any = {}
+        const res: { [key: string]: number; } = {}
 
         // deno-lint-ignore no-explicit-any
-        for(const i of data as any) {
+        for (const i of data as any) {
             res[i.levels.id] = i.progress
         }
 
