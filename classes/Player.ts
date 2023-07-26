@@ -63,7 +63,7 @@ export default class {
     async fetchRecords(accepted = false, sortBy = 'timestamp', start = 0, end = 50): Promise<Record[]> {
         const { data, error } = await supabase
             .from('records')
-            .select('*')
+            .select(selectStr(new Record('', 0)))
             .eq('userid', this.uid)
             .eq('isChecked', accepted)
             .order(sortBy)

@@ -29,4 +29,28 @@ export default class {
 
         return res
     }
+
+    async fetchLevelsByUID(uid: string, start = 0, end = 50) {
+        const { data, error } = await supabase
+            .from('records')
+            .select(`userid, levelid, progress, levels!inner(id, ${this.type}Top)`)
+            .eq('userid', uid)
+            .not(`levels.${this.type}Top`, 'is', null)
+            .gte(`levels.${this.type}Top`, start)
+            .lte(`levels.${this.type}Top`, end)
+        
+        if(error) {
+            throw new Error(error.message)
+        }
+
+        // deno-lint-ignore no-explicit-any
+        const res: any = {}
+
+        // deno-lint-ignore no-explicit-any
+        for(const i of data as any) {
+            res[i.levels.id] = i.progress
+        }
+
+        return res
+    }
 }
