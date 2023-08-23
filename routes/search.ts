@@ -3,8 +3,13 @@ import Search from '@classes/Search.ts'
 
 export const searchRoute = new Hono()
 
-searchRoute.get('/:query', (ctx) => {
+searchRoute.get('/:query', async (ctx) => {
+    const query = ctx.req.param('query')
     const limit = parseInt(ctx.req.query('limit')!) || 10
+    const search = new Search(limit);
 
-    return ctx.json({})
+    return ctx.json({
+        levels: await search.levels(query),
+        players: await search.players(query)
+    })
 })
