@@ -8,19 +8,19 @@ function isNumeric(value: string) {
 }
 
 export default class {
-    query: string
+    limit: number
 
-    constructor(query: string) {
-        this.query = query
+    constructor(limit: number) {
+        this.limit = limit
     }
 
-    async levelSearch( limit = 10) {
-        if (isNumeric(this.query)) {
+    async level(query: string) {
+        if (isNumeric(query)) {
             const { data, error } = await supabase
                 .from('levels')
                 .select(selectStr(new Level(0)))
-                .eq('id', this.query)
-                .limit(limit)
+                .eq('id', query)
+                .limit(this.limit)
 
             if (error) {
                 throw new Error(error.message)
@@ -38,8 +38,8 @@ export default class {
         const { data, error } = await supabase
             .from('levels')
             .select(selectStr(new Level(0)))
-            .ilike('name', `%${this.query}%`)
-            .limit(limit)
+            .ilike('name', `%${query}%`)
+            .limit(this.limit)
 
         if (error) {
             throw new Error(error.message)
@@ -54,7 +54,7 @@ export default class {
         return res
     }
 
-    async playerSearch(limit: number) {
+    async player(limit: number) {
 
     }
 }
