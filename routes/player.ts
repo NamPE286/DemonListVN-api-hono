@@ -34,7 +34,10 @@ playerRoute.get('/:uid', async (ctx) => {
     }
     catch (err) {
         console.error(err)
-        return ctx.status(404)
+
+        ctx.status(404)
+
+        return ctx.json(err)
     }
 })
 

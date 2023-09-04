@@ -58,6 +58,7 @@
     "https://esm.sh/@supabase/supabase-js@2.27.0": "7b3585344420e0030a70dbc91230f21b9b520bc9f83acdb369f644c839025ef5",
     "https://esm.sh/@supabase/supabase-js@2.29.0": "a4e4953cca14e49cf320e898134157b8585a3597490ad8c1fa7c6d947246a64a",
     "https://esm.sh/jsdoc-openapi@0.0.7": "59be831c882276c1b82b3a2b5eae8b1d3de06e972305c1477e4e35ca81d0e63f",
+    "https://esm.sh/jsonwebtoken@9.0.2": "52fbae0600fecc1acf934ce224e29cbbeae2212b77f3d36d8541db3de671fba7",
     "https://esm.sh/openapi-comment-parser@1.0.0": "fafb2e72d0ab5d58e95aa2dfd2e810675941ed1c1e28eec372f770b12a86d6f1",
     "https://esm.sh/openapi-jsdoc@0.0.2": "469b2ac5c24384734957cca08508988814953f3cd8fd5429ef705963dc2216aa",
     "https://esm.sh/v129/@apidevtools/json-schema-ref-parser@8.0.0/denonext/json-schema-ref-parser.mjs": "51f786d080c53e52dd08912962c25a402443edaa4eb01b99002ed1e98f3730fb",
@@ -117,11 +118,29 @@
     "https://esm.sh/v129/websocket@1.0.34/denonext/websocket.mjs": "8d8565e250b084b34b9a9345f2368772b0ceeeae302543c7e2bd2c4e3fb5c4a0",
     "https://esm.sh/v129/wrappy@1.0.2/denonext/wrappy.mjs": "3c31e4782e0307cf56b319fcec6110f925dafe6cb47a8fa23350d480f5fa8b06",
     "https://esm.sh/v129/z-schema@3.25.1/denonext/z-schema.mjs": "0ed366a56ce23d8a46161af8e5d94051a06470d9db765a3c3d5cdc22157a163d",
-    "https://esm.sh/v129/z-schema@4.2.4/denonext/z-schema.mjs": "c4dadfbde70ee15cdfed6349c47a6a44f84230ca56ce8234ad3789a375975b24"
+    "https://esm.sh/v129/z-schema@4.2.4/denonext/z-schema.mjs": "c4dadfbde70ee15cdfed6349c47a6a44f84230ca56ce8234ad3789a375975b24",
+    "https://esm.sh/v131/buffer-equal-constant-time@1.0.1/denonext/buffer-equal-constant-time.mjs": "8078ba0314f3174eb9f95f33122dda5f7fc05f6cfbbf153449133f3f4454c6dd",
+    "https://esm.sh/v131/ecdsa-sig-formatter@1.0.11/denonext/ecdsa-sig-formatter.mjs": "4c75e56e6d5526c86d225ce717356e79684f5c34de8afa04052726c67b4b334f",
+    "https://esm.sh/v131/jsonwebtoken@9.0.2/denonext/jsonwebtoken.mjs": "ff82139a895c71ec343c8a1bfb2d9ba12f2296f3bc86d94474507c7b8eeb213f",
+    "https://esm.sh/v131/jwa@1.4.1/denonext/jwa.mjs": "0f7b50f80c56c181e96e9872216168a3ac0d7ad54e2ffb80459774bc8cf96c73",
+    "https://esm.sh/v131/jws@3.2.2/denonext/jws.mjs": "c5675b32019d673d3a76bb514b2078ac45354e3f256dfdec9d5f33e0992c2153",
+    "https://esm.sh/v131/lodash.includes@4.3.0/denonext/lodash.includes.mjs": "a07adc79fd2755f934455708563e8b621e37c5315c0468df4130e1a22171b5a9",
+    "https://esm.sh/v131/lodash.isboolean@3.0.3/denonext/lodash.isboolean.mjs": "27434950864933132988defee718cd52638988dd60fc79a4e5a991f8b1c7671d",
+    "https://esm.sh/v131/lodash.isinteger@4.0.4/denonext/lodash.isinteger.mjs": "5cd5951346247f52e361079c92d063baa7c210b7bc803b1c513aab4d8f1b0e18",
+    "https://esm.sh/v131/lodash.isnumber@3.0.3/denonext/lodash.isnumber.mjs": "a622672f1af364f92b3127c977b12e0d40350a786f5cb91fa1c42f6b12d65680",
+    "https://esm.sh/v131/lodash.isplainobject@4.0.6/denonext/lodash.isplainobject.mjs": "86aad7158a58b3d46b94c444999612ae13a30cd7377d4136ad06c81cc4db1f0a",
+    "https://esm.sh/v131/lodash.isstring@4.0.1/denonext/lodash.isstring.mjs": "6d1104530adc8825c99fd34d6974fb66200dae8464820290ec31f82bf4728bbd",
+    "https://esm.sh/v131/lodash.once@4.1.1/denonext/lodash.once.mjs": "6ff4cf1298de1f20ca1b77a8919155a47f4cabae22831c721aedb3ced79e2951",
+    "https://esm.sh/v131/lru-cache@6.0.0/denonext/lru-cache.mjs": "24583c5c6a66ad0c20393bb59f45bb5bf77a4bff6545d2f22c4718f48d943840",
+    "https://esm.sh/v131/ms@2.1.3/denonext/ms.mjs": "0f06597e493998793b8f52232868976128fca326eec3bcd56f10e66e6efd1839",
+    "https://esm.sh/v131/safe-buffer@5.2.1/denonext/safe-buffer.mjs": "facbcb4f4622e13062978522fa12c42cae4e12f55b0e1d3fa1c4bc751bd827c7",
+    "https://esm.sh/v131/semver@7.5.4/denonext/semver.mjs": "a4f14981b8c43fc1b93e36c2be75d3e3ffad8e394eefe20ae59c8c9edd787f81",
+    "https://esm.sh/v131/yallist@4.0.0/denonext/yallist.mjs": "61f180d807dda50bac17028eda05d5722a3fecef6e98a9064e2353ea6864fd82"
   },
   "npm": {
     "specifiers": {
       "@supabase/supabase-js@2.27.0": "@supabase/supabase-js@2.27.0",
+      "@types/node": "@types/node@18.16.19",
       "swagger-jsdoc": "swagger-jsdoc@6.2.8"
     },
     "packages": {
@@ -203,6 +222,10 @@
       },
       "@types/json-schema@7.0.12": {
         "integrity": "sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==",
+        "dependencies": {}
+      },
+      "@types/node@18.16.19": {
+        "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
         "dependencies": {}
       },
       "@types/node@20.4.4": {

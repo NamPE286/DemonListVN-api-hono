@@ -1,5 +1,6 @@
 import { Hono } from 'https://deno.land/x/hono@v3.3.1/mod.ts'
 import Level from '@classes/Level.ts'
+import userAuth from '../middleware/userAuth.ts'
 
 export const levelRoute = new Hono()
 
@@ -34,7 +35,9 @@ levelRoute.get('/:id', async (ctx) => {
     }
     catch (err) {
         console.error(err)
-        return ctx.status(404)
+        ctx.status(404)
+
+        return ctx.json(err)
     }
 })
 
@@ -93,4 +96,9 @@ levelRoute.get('/:id/records', async (ctx) => {
         console.error(err)
         return ctx.status(500)
     }
+})
+
+levelRoute.put('/', userAuth, async (ctx) => {
+    console.log('ok')
+    return ctx.json({})
 })

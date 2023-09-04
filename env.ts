@@ -14,3 +14,4 @@ async function getEnv(key: string) {
 
 export const SUPABASE_API_KEY: string = (await getEnv("SUPABASE_API_KEY"))!
 export const SUPABASE_API_URL: string = (await getEnv("SUPABASE_API_URL"))!
+export const JWT_SECRET: string = (await getEnv("JWT_SECRET"))!
