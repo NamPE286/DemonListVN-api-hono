@@ -3,7 +3,7 @@ import { levelRoute } from './routes/level.ts'
 import { playerRoute } from './routes/player.ts'
 import { listRoute } from './routes/list.ts'
 import { searchRoute } from './routes/search.ts'
-import apiSpec from './openAPISpec.json' assert {type: 'json'}
+import docs from './docs.json' assert {type: 'json'}
 
 const app = new Hono()
 
@@ -12,7 +12,7 @@ app.get('/', (ctx) => {
 })
 
 app.get('/docs.json', (ctx) => {
-    return ctx.json(apiSpec)
+    return ctx.json(docs)
 })
 
 app.route('/level', levelRoute)

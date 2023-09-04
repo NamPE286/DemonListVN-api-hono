@@ -2,7 +2,7 @@
   "tasks": {
     "dev": "deno run --allow-all --watch main.ts",
     "start": "deno run --allow-env --allow-read --allow-ffi --allow-net main.ts",
-    "docgen": "deno run --allow-read --allow-write utils/generateOpenAPISpec.ts"
+    "docsgen": "deno run --allow-read --allow-write utils/docsGen.ts"
   },
   "imports": {
     "@src/" : "./src/",

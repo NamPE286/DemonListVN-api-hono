@@ -27,7 +27,7 @@ const options = {
 
 const swaggerSpec = swaggerJsdoc(options);
 
-Deno.writeTextFile('./openAPISpec.json', JSON.stringify(swaggerSpec)).then(() => {
+Deno.writeTextFile('./docs.json', JSON.stringify(swaggerSpec)).then(() => {
     console.log(swaggerSpec)
     console.log('OpenAPI specification written to /openAPISpec.json')
 }).catch((err) => {
