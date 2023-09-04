@@ -1,6 +1,6 @@
-import openapiJSDoc from "https://esm.sh/openapi-jsdoc@0.0.2"
+import swaggerJsdoc from "npm:swagger-jsdoc"
 
-export const apiSpec = openapiJSDoc({
+const options = {
     definition: {
         openapi: "3.0.0",
         info: {
@@ -23,4 +23,13 @@ export const apiSpec = openapiJSDoc({
         ],
     },
     apis: ["**/*.ts"],
+}
+
+const swaggerSpec = swaggerJsdoc(options);
+
+Deno.writeTextFile('./openAPISpec.json', JSON.stringify(swaggerSpec)).then(() => {
+    console.log(swaggerSpec)
+    console.log('OpenAPI specification written to /openAPISpec.json')
+}).catch((err) => {
+    console.log(err)
 })
