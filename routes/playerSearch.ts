@@ -1,5 +1,4 @@
 import { Hono } from 'https://deno.land/x/hono@v3.3.1/mod.ts'
-import Search from '@classes/Search.ts'
 import PlayerSearch from '@classes/PlayerSearch.ts'
 
 export const playerSearchRoute = new Hono()
