@@ -29,6 +29,8 @@ playerSearchRoute.get('/:province/:city?', async (ctx) => {
     const city = ctx.req.param('city')
     const playerSearch = new PlayerSearch()
 
+    console.log(province, city)
+
     if (city) {
         return ctx.json(await playerSearch.searchByCity(city))
     }

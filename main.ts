@@ -4,9 +4,12 @@ import { playerRoute } from './routes/player.ts'
 import { listRoute } from './routes/list.ts'
 import { searchRoute } from './routes/search.ts'
 import { playerSearchRoute } from './routes/playerSearch.ts'
+import { enableCors } from './utils/enableCors.ts'
 import docs from './docs.json' assert {type: 'json'}
 
 const app = new Hono()
+
+enableCors(app)
 
 app.get('/', (ctx) => {
     return ctx.json({ timestamp: new Date() })
