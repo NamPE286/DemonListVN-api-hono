@@ -8,6 +8,7 @@ export default class {
             .from('players')
             .select(selectStr(new Player('')))
             .eq('province', province)
+            .order('rating', {ascending: false})
 
         if (error) {
             throw error
@@ -27,6 +28,7 @@ export default class {
             .from('players')
             .select(selectStr(new Player('')))
             .eq('city', city)
+            .order('rating', {ascending: false})
 
         if (error) {
             throw error
