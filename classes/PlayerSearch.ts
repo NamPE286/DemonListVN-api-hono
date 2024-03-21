@@ -8,6 +8,7 @@ export default class {
             .from('players')
             .select(selectStr(new Player('')))
             .eq('province', province)
+            .eq('isHidden', false)
             .order('rating', {ascending: false})
 
         if (error) {
@@ -28,6 +29,7 @@ export default class {
             .from('players')
             .select(selectStr(new Player('')))
             .eq('city', city)
+            .eq('isHidden', false)
             .order('rating', {ascending: false})
 
         if (error) {
